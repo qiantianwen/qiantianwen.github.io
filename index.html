@@ -1,281 +1,752 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tianwen Qian - Homepage">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tianwen Qian (钱天文) - Homepage</title>
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<title>Tianwen Qian - Homepage</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./Files/academicons.min.css">
 
-
-<link rel="stylesheet" href="./Files/bootstrap.min.css">
-<link rel="stylesheet" href="./Files/all.min.css">
-<link rel="stylesheet" href="./Files/academicons.min.css">
-<link rel="stylesheet" href="./Files/charts.min.css">
-<link id="theme-style" rel="stylesheet" href="./Files/main.css">
-
-<link rel="icon" type="image/png" href="./Files/qtw.png">
-
-
-
-
-
-<!-- <script type="module" src="/assets/js/background_box.js"></script> -->
-<script type="module" src="./Files/background_star.js"></script>
-
-    <style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
-</style><style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
-</style><style>.crx_bdwk_down_wrap {
-    top: 70%;
-    left: 0;
-    position: fixed;
-    z-index: 99999999;
-    color: #fff;
-    user-select: none;
-}
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_loading {
-        background-color: #666;
-        cursor: wait;
-        width: 126px;
-        text-align: center;
-        padding: 16px 0;
-    }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_loading p {
-            font-size: 14px;
+    <style>
+        /* Modern System Font Stack for that crisp "Academic" look */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f8fafc;
+            color: #1f2933;
+            line-height: 1.65;
+            font-size: 0.98rem;
         }
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_loading small {
-            font-size: 10px;
+        /* Custom Colors */
+        :root {
+            --primary-color: #0f172a; /* Slate 900 - Deep Navy */
+            --accent-color: #2563eb; /* Blue 600 - Bright Blue for links */
+            --bg-subtle: #f8fafc; /* Slate 50 - Very light grey/blue tint */
+            --border-subtle: #e2e8f0; /* Light blue-grey border */
         }
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_btn {
-        width: 126px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 14px;
-        background-color: #dd5a57;
-        position: relative;
-    }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        background-color: #666;
-        font-size: 12px;
-    }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types div {
-            position: relative;
+        /* Specific link styling to match academic pages */
+        .prose a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .prose a:hover {
+            text-decoration: underline;
+            color: #1e40af; /* Darker blue */
         }
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_types div:after {
-                content: ' ';
-                height: 12px;
-                width: 1px;
-                background-color: #eee;
-                position: absolute;
-                top: 10px;
-                right: 0;
-                transform: scaleX(0.5);
+        /* Global link hover for consistency */
+        a:hover {
+            color: #1e40af;
+        }
+
+        /* Publication link buttons - Enriched Style */
+        .pub-link {
+            color: #0f3068; /* Blue 900 */
+            background-color: #eef2fb; /* Muted Blue */
+            font-size: 0.72rem;
+            margin-right: 0.35rem;
+            text-decoration: none;
+            border: 1px solid #c8d5f1; /* Soft blue */
+            padding: 3px 10px;
+            border-radius: 3px;
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+        .pub-link:hover {
+            background-color: #0f3068;
+            color: white;
+            border-color: #0f3068;
+            text-decoration: none;
+            box-shadow: none;
+        }
+
+        /* Sidebar sticky positioning */
+        .sticky-sidebar {
+            position: sticky;
+            top: 4rem;
+        }
+
+        /* Section Header Styling */
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-variant: small-caps;
+            letter-spacing: 0.08em;
+            border-bottom: 1px solid var(--border-subtle);
+            display: inline-block;
+            padding-bottom: 0.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .paper-shell {
+            max-width: 1000px; /* increased from 900px to provide a wider layout */
+            margin: 1.5rem auto 3rem;
+            padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.2rem, 4vw, 2.75rem);
+            background: #ffffff;
+            border: 1px solid var(--border-subtle);
+        }
+        .tight-columns {
+            display: grid;
+            grid-template-columns: 240px minmax(0, 1fr); /* slightly wider sidebar (from 210px to 240px) */
+            column-gap: 2rem;
+            row-gap: 2rem;
+        }
+        .profile-column {
+            min-width: 190px;
+        }
+        .profile-card {
+            padding: 1rem;
+            background: transparent;
+            border: none;
+        }
+        .content-area {
+            min-width: 0;
+        }
+        .content-area section {
+            padding-bottom: 1.75rem;
+            margin-bottom: 1.75rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .content-area section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .prose p {
+            margin-bottom: 0.85rem;
+            text-align: justify;
+            line-height: 1.7;
+        }
+        .nav-link {
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid transparent;
+            color: #cbd5e1;
+            transition: color 0.2s ease, border-color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        .nav-link--mobile {
+            display: block;
+            padding: 0.35rem 0;
+            color: #333;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .pub-entry {
+            padding-bottom: 1.25rem;
+            border-bottom: 1px dashed var(--border-subtle);
+        }
+        .pub-entry:last-child {
+            border-bottom: none;
+        }
+
+        /* Small venue tag on paper cover thumbnails */
+        .paper-venue-tag {
+            position: absolute;
+            top: 0.4rem;
+            left: 0.4rem;
+            padding: 0.15rem 0.45rem;
+            background-color: var(--primary-color); /* deep navy */
+            color: #ffffff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-radius: 0.25rem;
+            z-index: 5;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.4);
+            opacity: 0.96;
+        }
+
+        @media (max-width: 960px) {
+            .tight-columns {
+                grid-template-columns: 1fr;
             }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types div:last-child:after {
-                    display: none;
-                }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types_check {
-            flex: 1;
-            color: #dd5a57;
-            padding: 8px;
-            cursor: pointer;
-            font-weight: bold;
+            .profile-column {
+                min-width: auto;
+                margin-bottom: 1.5rem;
+            }
+            .sticky-sidebar {
+                position: static;
+            }
+            /* Slightly smaller venue tag on narrow screens (if shown) */
+            .paper-venue-tag {
+                font-size: 0.55rem;
+                padding: 0.12rem 0.4rem;
+            }
         }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_types_uncheck {
-            flex: 1;
-            padding: 8px;
-            cursor: pointer;
-            color: #fff;
-            font-weight: lighter;
-        }
-</style></head>
+    <!-- Top Navigation Bar - Dark Theme -->
+    <nav class="bg-slate-900 text-white sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-14">
+                <!-- Left: Site Title -->
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="text-xl font-bold tracking-wider text-white hover:text-slate-200">Tianwen Qian</a>
+                    </div>
+                </div>
 
-    <body>
-        
+                <!-- Right: Desktop Menu -->
+                <div class="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-6">
+                    <a href="#about" class="nav-link inline-flex items-center h-full">About</a>
+                    <a href="#news" class="nav-link inline-flex items-center h-full">News</a>
+                    <a href="#publications" class="nav-link inline-flex items-center h-full">Publications</a>
+                    <a href="#experiences" class="nav-link inline-flex items-center h-full">Experiences</a>
+                    <a href="#education" class="nav-link inline-flex items-center h-full">Education</a>
+                    <a href="#services" class="nav-link inline-flex items-center h-full">Services</a>
+                </div>
 
-
-
-<!-- <canvas id="bg"></canvas> -->
-
-<div class="wrapper">
-
-    
-<section class="section intro-section">
-
-    
-    <div class="avatar-container">
-        <img class="avatar" src="./Files/qtw.png" alt="avatar">
-    </div>
-    <div class="intro-container">
-        <div class="header">
-            <h2 class="name">Tianwen Qian (钱天文)</h2>
-            <h3 class="title">Ph.D. Student in Fudan University</h3>
-        </div>
-        <div class="contact">
-            
-<ul class="list-unstyled contact-list">
-    <li class="email">
-        twqian19 [at] fudan.edu.cn
-    </li>
-    <li class="google-scholar">
-        <a class="link" href="https://scholar.google.com/citations?user=Vvpvtp8AAAAJ&hl=en" target="_blank">Google Scholar</a>
-    </li>
-    <li class="github">
-        <a class="link" href="https://github.com/qiantianwen" target="_blank">GitHub</a>
-    </li>
-    <li class="CV">
-        <a class="link" href="CV_Tianwen_Qian.pdf" target="_blank">CV</a>
-    </li>
-</ul>
-        </div>
-    </div>
-
-</section>
-<section class="section profile-section">
-    <div class="section-title">
-        About Me
-    </div>
-    <div class="details">
-    <p>I'm currently a Ph.D. student major in computer application technology at <a class="url" href="https://fvl.fudan.edu.cn" target="_blank">FVL Lab</a>, Fudan University. 
-        And i'm very lucky to be co-supervised by <a class="url" href="https://scholar.google.com.hk/citations?hl=en&user=f3_FP8AAAAAJ" target="_blank">Prof. Yu-Gang Jiang</a> and  <a class="url" href="https://scholar.google.com.hk/citations?user=DfWdqzQAAAAJ&hl=en" target="_blank">Prof. Jingjing Chen</a>. 
-        Before this, I got my Bachelor degree from Dalian University of Technology in 2019. 
-        My research interest is focused on Vision-Language Learning, especially Visual Question Answering. In addition, i also delve into some autonoumous driving related topics, such as 3D object detection, lane detection, stereo depth estimation.</p>
-        </div>
-</section>
-
-
-<section class="section publications-section">
-
-    <div class="section-title">
-        Publications
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./Files/nuscenes-qa.png" alt="nuscenes-qa.png">
-        </div>
-        <div class="info-container">
-                <p class="title">
-                    <a class="title_link" href="https://arxiv.org/abs/2305.14836" target="_blank">NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario</a>
-                </p>
-                    <div class="authors"><p><strong>Tianwen Qian</strong>, Jingjing Chen, Linhai Zhuo, Yang Jiao, Yu-Gang Jiang</p></div>
-                    <div class="conference"><p>AAAI, 2024.</p></div>
-                <a class="url" href="https://arxiv.org/pdf/2305.14836.pdf" target="_blank">[PDF]</a>
-                <a class="url" href="https://github.com/qiantianwen/NuScenes-QA" target="_blank">[Code]</a>
-        </div>
-    </div>
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./Files/LocAns.png" alt="LocAns.png">
-        </div>
-        <div class="info-container">
-                <p class="title">
-                        <a class="title_link" href="https://arxiv.org/abs/2210.02081" target="_blank">Locate before Answering: Answer Guided Question Localization for Video Question Answering</a></p>
-                    <div class="authors"><p><strong>Tianwen Qian</strong>, Ran Cui, Jingjing Chen, Pai Peng, Xiaowei Guo, Yu-Gang Jiang</p></p></div>
-                    <div class="conference"><p>IEEE Transactions on Multimedia (TMM), 2023.</p></div>
-                <a class="url" href="https://arxiv.org/pdf/2210.02081.pdf" target="_blank">[PDF]</a>
-        </div>
-    </div>
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./Files/ViGA.png" alt="ViGA.png">
-        </div>
-        <div class="info-container">
-                <p class="title">
-                    <a class="title_link" href="https://arxiv.org/abs/2204.09409" target="_blank">Video Moment Retrieval from Text Queries via Single Frame Annotation</a>
-                </p>
-                    <div class="authors"><p>Ran Cui*, <strong>Tianwen Qian*</strong>, Pai Peng, Elena Daskalaki, Jingjing Chen, Xiaowei Guo, Huyang Sun, Yu-Gang Jiang</p></div>
-                    <div class="conference"><p>* indicates equal contribution.</p></div>
-                    <div class="conference"><p>ACM SIGIR, 2022.</p></div>
-                <a class="url" href="https://arxiv.org/pdf/2204.09409.pdf" target="_blank">[PDF]</a>
-                <a class="url" href="https://github.com/r-cui/ViGA" target="_blank">[Code]</a>
-        </div>
-    </div>
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./Files/SGR.png" alt="SGR.png">
-        </div>
-        <div class="info-container">
-                <p class="title">
-                    <a class="title_link" href="https://ieeexplore.ieee.org/document/9762027" target="_blank">Scene Graph Refinement Network for Visual Question Answering</a>
-                </p>
-                    <div class="authors"><p><strong>Tianwen Qian</strong>, Jingjing Chen, Shaoxiang Chen, Bo Wu, Yu-Gang Jiang</p></div>
-                    <div class="conference"><p>IEEE Transactions on Multimedia (TMM), 2022.</p></div>
-                <a class="url" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9762027" target="_blank">[PDF]</a>
-        </div>
-    </div>
-</section>
-
-<section class="section experiences-section">
-    <div class="section-title">
-        Experiences
-    </div>
-    
-    <div class="item">
-
-    <div class="upper-row">
-            <div class="company">
-                Bilibili AI-Lab
+                <!-- Right: Mobile Menu Button -->
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-slate-200 hover:text-white hover:bg-slate-800 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
-            <div class="location">Shanghai, China</div>
-            <div class="time">Jun. 2021 – Jun. 2022 </div>
-    </div>
+        </div>
 
-
-     <div class="below-row">
-            <div class="role">Research intern with the topic of Multimodal Learning, Large-scale Video Pre-training, Video Localization.</div>
-     </div>
-    
- 
-    <div class="item">
-        <div class="upper-row">
-            <div class="company">
-                Dalian University of Technology
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="hidden sm:hidden bg-slate-900 border-t border-slate-700" id="mobile-menu">
+            <div class="py-2">
+                <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">About</a>
+                <a href="#news" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">News</a>
+                <a href="#publications" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Publications</a>
+                <a href="#experiences" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Experiences</a>
+                <a href="#education" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Education</a>
+                <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Services</a>
             </div>
-            <div class="location">Dalian, Liaoning, China</div>
-            <div class="time">Sep. 2018 – Jun. 2019</div>
         </div>
-        <div class="below-row">
-            <div class="role">Research assistant of the Smart Ocean Lab with the topic of visual obstacle avoidance for unmanned ships.</div>
+    </nav>
+
+    <div class="paper-shell">
+        <div class="tight-columns">
+
+            <!-- Left Sidebar (Profile Info) -->
+            <aside class="profile-column flex justify-center">
+                <div class="sticky-sidebar profile-card">
+                    <div class="flex flex-col items-center text-center">
+                        <!-- Profile Image -->
+                        <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border border-slate-300 bg-white flex items-center justify-center text-slate-300 mx-auto">
+                            <img src="./Files/qtw.png" alt="Tianwen Qian" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Name -->
+                        <h1 class="text-lg font-bold tracking-wide text-slate-900 mb-1">Tianwen Qian</h1>
+                        <h2 class="text-base text-slate-500 font-light mb-4">钱天文</h2>
+
+                        <!-- Email (text only) -->
+                        <p class="text-sm text-slate-600 mb-4">
+                            <span class="font-semibold text-slate-800">Email:</span>
+                            <a href="mailto:twqian19@fudan.edu.cn" class="text-slate-700 hover:text-blue-600 underline ml-1">twqian19@fudan.edu.cn</a>
+                        </p>
+
+                        <!-- Icon Buttons Row -->
+                        <div class="flex flex-row items-center justify-center space-x-4 text-slate-500 text-xl">
+                            <a href="mailto:twqian19@fudan.edu.cn" class="hover:text-blue-600 transition" title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=Vvpvtp8AAAAJ&hl=en" target="_blank" class="hover:text-blue-600 transition" title="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://github.com/qiantianwen" target="_blank" class="hover:text-blue-600 transition" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" onclick="alert('CV available on request — please email twqian19@fudan.edu.cn')" title="CV (available on request)" class="hover:text-blue-600 transition">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Content Area -->
+            <div class="content-area">
+
+                 <!-- About Me Section -->
+                <section id="about" class="scroll-mt-20">
+                     <h2 class="text-2xl font-bold mb-4 section-title">About Me</h2>
+                     <div class="prose max-w-none text-slate-700 leading-7 text-justify text-base">
+                         <p class="mb-4">
+                             I am an Associate Researcher at East China Normal University (School of Computer Science and Technology). I received my Ph.D. in Computer Application Technology from <a href="https://fvl.fudan.edu.cn" target="_blank">Fudan University</a> (2019.09–2024.06), advised by <a href="https://scholar.google.com.hk/citations?hl=en&user=f3_FP8AAAAAJ" target="_blank">Prof. Yu-Gang Jiang</a> and <a href="https://scholar.google.com.hk/citations?user=DfWdqzQAAAAJ&hl=en" target="_blank">Prof. Jingjing Chen</a>.
+                         </p>
+                         <p>
+                            My research interest is focused on Vision-Language Learning, especially Visual Question Answering. In addition, i also delve into some autonoumous driving related topics, such as 3D object detection, lane detection, stereo depth estimation.
+                         </p>
+                     </div>
+                </section>
+
+                <!-- News Section -->
+            <section id="news" class="scroll-mt-20">
+                <h2 class="text-2xl font-bold mb-6 section-title">News</h2>
+                <ul class="space-y-4">
+                    <!-- Item New 1 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Oct. 2025
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-900">Look Before You Decide</span> (MARS-Bench) was accepted to <span class="font-bold text-slate-800">ACM MM 2025</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item New 2 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Aug. 2025
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-900">EgoCross</span> was accepted to <span class="font-bold text-slate-800">AAAI 2026</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item New 3 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Jun. 2025
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-900">Domain-RAG</span> was accepted to <span class="font-bold text-slate-800">NeurIPS 2025</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item New 4 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Jun. 2025
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-900">NeighborRetr</span> was accepted to <span class="font-bold text-slate-800">CVPR 2025</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item New 5 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Apr. 2025
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-900">HSACNet</span> was accepted to <span class="font-bold text-slate-800">ICME 2025</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item 1 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Jan. 2024
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-900">NuScenes-QA</span> was accepted to <span class="font-bold text-slate-800">AAAI 2024</span>; preprint and code are now online.
+                        </p>
+                    </li>
+
+                    <!-- Item 2 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Jun. 2023
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            Our "Locate before Answering" work appeared in <span class="font-bold text-slate-800">IEEE Transactions on Multimedia</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item 3 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Jul. 2022
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            ViGA for video moment retrieval was presented at <span class="font-bold text-slate-800">ACM SIGIR 2022</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item 4 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Jun. 2022
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            Wrapped up my multimodal research internship at <span class="font-semibold text-slate-900">Bilibili AI-Lab</span>.
+                        </p>
+                    </li>
+
+                    <!-- Item 5 -->
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-100 text-slate-600 text-xs font-bold rounded border border-slate-200 group-hover:bg-blue-50 group-hover:text-blue-700 group-hover:border-blue-100 transition-colors font-sans shadow-sm">
+                                Mar. 2022
+                            </span>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            Scene Graph Refinement Network for VQA was published in <span class="font-bold text-slate-800">IEEE Transactions on Multimedia</span>.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+
+                <!-- Selected Publications -->
+                <section id="publications" class="scroll-mt-20">
+                    <h2 class="text-2xl font-bold mb-6 section-title">Publications</h2>
+
+                    <div class="space-y-5">
+
+                        <!-- Paper New 1 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">AAAI 2026</span>
+                                     <img src="./Files/imgs/EgoCross.png" alt="EgoCross" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2508.10729" target="_blank" class="hover:text-blue-600 transition-colors">Egocross: Benchmarking multimodal large language models for cross-domain egocentric video question answering</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    Yanjun Li, Yuqian Fu, <strong>Tianwen Qian</strong>, Qi'ao Xu, Silong Dai, Danda Pani Paudel, Luc Van Gool, Xiaoling Wang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    AAAI, 2026
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2508.10729" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/MyUniverse0726/EgoCross" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paper New 2 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">ACM MM 2025</span>
+                                     <img src="./Files/imgs/LookBefore.png" alt="LookBefore" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2404.12966" target="_blank" class="hover:text-blue-600 transition-colors">Look Before You Decide: Prompting Active Deduction of MLLMs for Assumptive Reasoning</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    Yian Li, Wentao Tian, Yang Jiao, <strong>Tianwen Qian</strong>, Na Zhao, Bin Zhu, Jingjing Chen, Yu-Gang Jiang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    ACM MM, 2025
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2404.12966.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paper New 3 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">NeurIPS 2025</span>
+                                     <img src="./Files/imgs/DomainRAG.png" alt="DomainRAG" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2506.05872" target="_blank" class="hover:text-blue-600 transition-colors">Domain-RAG: Retrieval-Guided Compositional Image Generation for Cross-Domain Few-Shot Object Detection</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    Yu Li, Xingyu Qiu, Yuqian Fu, Jie Chen, <strong>Tianwen Qian</strong>, Xu Zheng, Danda Pani Paudel, Yanwei Fu, Xuanjing Huang, Luc Van Gool, Yu-Gang Jiang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    NeurIPS, 2025
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2506.05872" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/LiYu0524/Domain-RAG" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paper New 4 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2025</span>
+                                     <img src="./Files/imgs/NeighborRetr.png" alt="NeighborRetr" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lin_NeighborRetr_Balancing_Hub_Centrality_in_Cross-Modal_Retrieval_CVPR_2025_paper.pdf" target="_blank" class="hover:text-blue-600 transition-colors">NeighborRetr: Balancing Hub Centrality in Cross-Modal Retrieval</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    Zengrong Lin, Zheng Wang, <strong>Tianwen Qian</strong>, Pan Mu, Sixian Chan, Cong Bai
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    CVPR, 2025
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Lin_NeighborRetr_Balancing_Hub_Centrality_in_Cross-Modal_Retrieval_CVPR_2025_paper.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/NeighborRetr" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paper New 5 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">ICME 2025</span>
+                                     <img src="./Files/imgs/HSACNet.png" alt="HSACNet" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2504.13428" target="_blank" class="hover:text-blue-600 transition-colors">HSACNet: Hierarchical Scale-Aware Consistency Regularized Semi-Supervised Change Detection</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    Qi'ao Xu, Pengfei Wang, Yanjun Li, <strong>Tianwen Qian</strong>, Xiaoling Wang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    ICME, 2025
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2504.13428" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Paper 1 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">AAAI 2024</span>
+                                     <img src="./Files/nuscenes-qa.png" alt="NuScenes-QA" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2305.14836" target="_blank" class="hover:text-blue-600 transition-colors">NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario</a>
+                                    <span class="text-red-600 font-bold ml-2 text-sm align-middle" title="Citation and GitHub star counts">(264 cites • 217 GitHub stars)</span>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    <strong>Tianwen Qian</strong>, Jingjing Chen, Linhai Zhuo, Yang Jiao, Yu-Gang Jiang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    AAAI, 2024
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2305.14836.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/qiantianwen/NuScenes-QA" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paper 2 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                    <span class="paper-venue-tag">TMM 2023</span>
+                                    <img src="./Files/LocAns.png" alt="LocAns" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2210.02081" target="_blank" class="hover:text-blue-600 transition-colors">Locate before Answering: Answer Guided Question Localization for Video Question Answering</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    <strong>Tianwen Qian</strong>, Ran Cui, Jingjing Chen, Pai Peng, Xiaowei Guo, Yu-Gang Jiang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    IEEE Transactions on Multimedia (TMM), 2023
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2210.02081.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paper 3 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                    <span class="paper-venue-tag">SIGIR 2022</span>
+                                    <img src="./Files/ViGA.png" alt="ViGA" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2204.09409" target="_blank" class="hover:text-blue-600 transition-colors">Video Moment Retrieval from Text Queries via Single Frame Annotation</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    Ran Cui*, <strong>Tianwen Qian*</strong>, Pai Peng, Elena Daskalaki, Jingjing Chen, Xiaowei Guo, Huyang Sun, Yu-Gang Jiang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    ACM SIGIR, 2022 (* indicates equal contribution)
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2204.09409.pdf" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/r-cui/ViGA" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Paper 4 -->
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-100 border border-slate-200 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                    <span class="paper-venue-tag">TMM 2022</span>
+                                    <img src="./Files/SGR.png" alt="SGR" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-900 leading-snug mb-2">
+                                    <a href="https://ieeexplore.ieee.org/document/9762027" target="_blank" class="hover:text-blue-600 transition-colors">Scene Graph Refinement Network for Visual Question Answering</a>
+                                </h3>
+                                <p class="text-slate-600 text-sm mb-2">
+                                    <strong>Tianwen Qian</strong>, Jingjing Chen, Shaoxiang Chen, Bo Wu, Yu-Gang Jiang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">
+                                    IEEE Transactions on Multimedia (TMM), 2022
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9762027" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Experiences Section -->
+                 <section id="experiences" class="scroll-mt-20">
+                    <h2 class="text-2xl font-bold mb-4 section-title">Experiences</h2>
+                    <div class="space-y-6">
+
+                        <!-- New: East China Normal University -->
+                        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-dashed border-slate-200 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">East China Normal University, School of Computer Science and Technology</h3>
+                                <p class="text-slate-600 text-sm">Associate Researcher</p>
+                            </div>
+                            <div class="text-sm font-bold text-slate-500 mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full h-fit">Mar. 2025 – Present</div>
+                        </div>
+
+                        <!-- New: Bosch -->
+                        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-dashed border-slate-200 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Bosch (China) Investment Ltd., Central Research</h3>
+                                <p class="text-slate-600 text-sm">AI Algorithm Researcher</p>
+                            </div>
+                            <div class="text-sm font-bold text-slate-500 mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full h-fit">Jul. 2024 – Nov. 2024</div>
+                        </div>
+
+                        <!-- Existing: Bilibili AI-Lab -->
+                        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-dashed border-slate-200 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Bilibili AI-Lab</h3>
+                                <p class="text-slate-600 text-sm">Research intern with the topic of Multimodal Learning, Large-scale Video Pre-training, Video Localization.</p>
+                            </div>
+                            <div class="text-sm font-bold text-slate-500 mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full h-fit">Jun. 2021 – Jun. 2022</div>
+                        </div>
+
+                        <!-- Existing: Dalian University of Technology -->
+                        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-dashed border-slate-200 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Dalian University of Technology</h3>
+                                <p class="text-slate-600 text-sm">Research assistant of the Smart Ocean Lab with the topic of visual obstacle avoidance for unmanned ships.</p>
+                            </div>
+                            <div class="text-sm font-bold text-slate-500 mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full h-fit">Sep. 2018 – Jun. 2019</div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                 <section id="education" class="scroll-mt-20">
+                    <h2 class="text-2xl font-bold mb-4 section-title">Education</h2>
+                    <div class="space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-dashed border-slate-200 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Fudan University</h3>
+                                <p class="text-slate-600 text-sm">Ph.D., Computer Application Technology</p>
+                            </div>
+                            <div class="text-sm font-bold text-slate-500 mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full h-fit">Sep. 2019 – Jun. 2024</div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between border-b border-dashed border-slate-200 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-base">Dalian University of Technology</h3>
+                                <p class="text-slate-600 text-sm">Bachelor of Engineering</p>
+                            </div>
+                            <div class="text-sm font-bold text-slate-500 mt-1 sm:mt-0 bg-slate-100 px-3 py-1 rounded-full h-fit">Sep. 2015 – Jun. 2019</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Academic Services Section -->
+                <section id="services" class="scroll-mt-20">
+                    <h2 class="text-2xl font-bold mb-4 section-title">Academic Services</h2>
+                    <ul class="space-y-3 text-slate-700 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-user-check text-blue-500 mt-1 mr-3"></i>
+                            <span>Conference Reviewer for <strong>ACM MM 2023</strong> / <strong>ECCV 2022</strong> / <strong>CVPR 2022</strong>.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-book-open text-blue-500 mt-1 mr-3"></i>
+                            <span>Journal Reviewer for <strong>TMM</strong> / <strong>ToMM</strong> / <strong>PR</strong> / <strong>Neurocomputing</strong>.</span>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AW0oDLTPrqCGyPuV2yp-JdjG1VyRzT_9rBHsvn9ExF0&cl=ffffff&w=200"></script>
+                </section>
+
+
+                 <!-- Footer -->
+                <footer class="text-center text-slate-400 text-sm mt-8 pb-8 border-t border-slate-200 pt-8">
+                    <p>&copy; 2025 Tianwen Qian.</p>
+                    <p class="mt-2 text-xs">Powered by <a href="#" class="hover:text-blue-600 hover:underline text-slate-500 transition-colors">AcademicPages</a> & <a href="#" class="hover:text-blue-600 hover:underline text-slate-500 transition-colors">Tailwind CSS</a>.</p>
+                </footer>
+
+            </div>
         </div>
     </div>
-</section>
-<section class="section service-section">
-    <div class="section-title">
-        Academic Services
-    </div>
-    <div class="item">
-       Conference Reviewer for <strong>ACM MM 2023</strong> / <strong>ECCV 2022</strong> / <strong>CVPR 2022</strong>.
-    </div>
-    <div class="item">
-       Journal Reviewer for <strong>TMM</strong> / <strong>ToMM</strong> / <strong>PR</strong> / <strong>Neurocomputing</strong>.
-       
-</section>
-    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AW0oDLTPrqCGyPuV2yp-JdjG1VyRzT_9rBHsvn9ExF0&cl=ffffff&w=200"></script>
-</section>
-<footer class="footer">
-    <div class="text-center">
-        <small id="copyright">
-            Updated: 2023-12-14
-        By Tianwen Qian
-        </small>
-    </div>
-</footer>
-</body></html>
+</body>
+</html>
