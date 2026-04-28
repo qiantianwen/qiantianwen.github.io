@@ -7,11 +7,11 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
+    
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./Files/academicons.min.css">
-
+    
     <style>
         /* Modern System Font Stack for that crisp "Academic" look */
         html {
@@ -25,7 +25,7 @@
             line-height: 1.65;
             font-size: 0.98rem;
         }
-
+    
         /* Custom Colors */
         :root {
             --primary-color: #e5e7eb; /* light heading color */
@@ -33,7 +33,7 @@
             --bg-subtle: #111827; /* slightly lighter than body */
             --border-subtle: #334155; /* lighter border for soft contrast */
         }
-
+    
         /* Specific link styling to match academic pages */
         .prose a {
             color: var(--accent-color);
@@ -44,12 +44,12 @@
             text-decoration: underline;
             color: #93c5fd; /* lighter blue */
         }
-
+    
         /* Global link hover for consistency */
         a:hover {
             color: #93c5fd;
         }
-
+    
         /* Publication link buttons - Enriched Style */
         .pub-link {
             color: #e5e7eb;
@@ -70,13 +70,13 @@
             text-decoration: none;
             box-shadow: none;
         }
-
+    
         /* Sidebar sticky positioning */
         .sticky-sidebar {
             position: sticky;
             top: 4rem;
         }
-
+    
         /* Section Header Styling */
         .section-title {
             color: var(--primary-color);
@@ -88,7 +88,7 @@
             padding-bottom: 0.2rem;
             margin-bottom: 1rem;
         }
-
+    
         .paper-shell {
             max-width: 1000px; /* increased from 900px to provide a wider layout */
             margin: 1.5rem auto 3rem;
@@ -155,7 +155,52 @@
         .pub-entry:last-child {
             border-bottom: none;
         }
-
+        .news-window {
+            max-height: 22rem;
+            overflow-y: auto;
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.35);
+            border: 1px solid var(--border-subtle);
+            border-radius: 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: #475569 #111827;
+        }
+        .news-window::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+        .news-window::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        .news-window::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 9999px;
+        }
+        .pub-year-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .pub-year-tab {
+            color: #cbd5e1;
+            background: #111827;
+            border: 1px solid #374151;
+            border-radius: 0.35rem;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+        .pub-year-tab:hover,
+        .pub-year-tab.active {
+            color: #ffffff;
+            background: #2563eb;
+            border-color: #2563eb;
+        }
+        .pub-year-panel[hidden] {
+            display: none;
+        }
+    
         /* Small venue tag on paper cover thumbnails */
         .paper-venue-tag {
             position: absolute;
@@ -173,7 +218,6 @@
             box-shadow: 0 1px 3px rgba(15, 23, 42, 0.4);
             opacity: 0.96;
         }
-
         /* Date badge for experiences/education */
         .date-badge {
             background-color: #020617;
@@ -185,7 +229,7 @@
             font-weight: 600;
             white-space: nowrap;
         }
-
+    
         @media (max-width: 960px) {
             .tight-columns {
                 grid-template-columns: 1fr;
@@ -219,7 +263,7 @@
                         </a>
                     </div>
                 </div>
-
+    
                 <!-- Right: Desktop Menu -->
                 <div class="hidden sm:ml-6 sm:flex sm:items-center sm:space-x-6">
                     <a href="#about" class="nav-link inline-flex items-center h-full">About</a>
@@ -227,9 +271,10 @@
                     <a href="#publications" class="nav-link inline-flex items-center h-full">Publications</a>
                     <a href="#experiences" class="nav-link inline-flex items-center h-full">Experiences</a>
                     <a href="#education" class="nav-link inline-flex items-center h-full">Education</a>
+                    <a href="#awards" class="nav-link inline-flex items-center h-full">Awards</a>
                     <a href="#services" class="nav-link inline-flex items-center h-full">Services</a>
                 </div>
-
+    
                 <!-- Right: Mobile Menu Button -->
                 <div class="-mr-2 flex items-center sm:hidden">
                     <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-slate-200 hover:text-white hover:bg-slate-800 focus:outline-none">
@@ -239,7 +284,7 @@
                 </div>
             </div>
         </div>
-
+    
         <!-- Mobile Menu (Hidden by default) -->
         <div class="hidden sm:hidden bg-slate-900 border-t border-slate-700" id="mobile-menu">
             <div class="py-2">
@@ -248,14 +293,15 @@
                 <a href="#publications" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Publications</a>
                 <a href="#experiences" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Experiences</a>
                 <a href="#education" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Education</a>
+                <a href="#awards" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Awards</a>
                 <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="nav-link--mobile text-slate-100 hover:text-white">Services</a>
             </div>
         </div>
     </nav>
-
+    
     <div class="paper-shell">
         <div class="tight-columns">
-
+    
             <!-- Left Sidebar (Profile Info) -->
             <aside class="profile-column flex justify-center">
                 <div class="sticky-sidebar profile-card">
@@ -264,19 +310,19 @@
                         <div class="w-32 h-32 rounded-full overflow-hidden mb-4 border border-slate-600 bg-slate-900 flex items-center justify-center text-slate-500 mx-auto">
                             <img src="./Files/qtw.png" alt="Tianwen Qian" class="w-full h-full object-cover">
                         </div>
-
+    
                         <!-- Name -->
                         <h1 class="text-lg font-bold tracking-wide text-slate-100 mb-3">Tianwen Qian</h1>
-
+    
                         <!-- Email (text only) -->
                         <p class="text-sm text-slate-300 mb-4">
                             <span class="font-semibold text-slate-200">Email:</span>
-                            <a href="mailto:twqian19@fudan.edu.cn" class="text-slate-200 hover:text-blue-400 underline ml-1">twqian19@fudan.edu.cn</a>
+                            <a href="mailto:twqian@cs.ecnu.edu.cn" class="text-slate-200 hover:text-blue-400 underline ml-1">twqian@cs.ecnu.edu.cn</a>
                         </p>
-
+    
                         <!-- Icon Buttons Row -->
                         <div class="flex flex-row items-center justify-center space-x-4 text-slate-400 text-xl">
-                            <a href="mailto:twqian19@fudan.edu.cn" class="hover:text-blue-400 transition" title="Email">
+                            <a href="mailto:twqian@cs.ecnu.edu.cn" class="hover:text-blue-400 transition" title="Email">
                                 <i class="fas fa-envelope"></i>
                             </a>
                             <a href="https://scholar.google.com/citations?user=Vvpvtp8AAAAJ&hl=en" target="_blank" class="hover:text-blue-400 transition" title="Google Scholar">
@@ -285,35 +331,97 @@
                             <a href="https://github.com/qiantianwen" target="_blank" class="hover:text-blue-400 transition" title="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" onclick="alert('CV available on request — please email twqian19@fudan.edu.cn')" title="CV (available on request)" class="hover:text-blue-400 transition">
+                            <a href="#" onclick="alert('CV available on request — please email twqian@cs.ecnu.edu.cn')" title="CV (available on request)" class="hover:text-blue-400 transition">
                                 <i class="fas fa-file-alt"></i>
                             </a>
                         </div>
-
+    
                     </div>
                 </div>
             </aside>
-
+    
             <!-- Right Content Area -->
             <div class="content-area">
-
+    
                  <!-- About Me Section -->
                 <section id="about" class="scroll-mt-20">
                      <h2 class="text-2xl font-bold mb-4 section-title">About me</h2>
                      <div class="prose max-w-none text-slate-200 leading-7 text-justify text-base">
                          <p class="mb-4">
-                             I am an Associate Researcher at East China Normal University (School of Computer Science and Technology). I received my Ph.D. in Computer Application Technology from <a href="https://fvl.fudan.edu.cn" target="_blank">Fudan University</a> (2019.09–2024.06), advised by <a href="https://scholar.google.com.hk/citations?hl=en&user=f3_FP8AAAAAJ" target="_blank">Prof. Yu-Gang Jiang</a> and <a href="https://scholar.google.com.hk/citations?user=DfWdqzQAAAAJ&hl=en" target="_blank">Prof. Jingjing Chen</a>.
+                             I am an Associate Researcher at the <a href="https://www.cs.ecnu.edu.cn" target="_blank">School of Computer Science and Technology, East China Normal University</a>. I received my Ph.D. in Computer Application Technology from <a href="https://www.fudan.edu.cn" target="_blank">Fudan University</a> (2019.09-2024.06) in <a href="https://fvl.fudan.edu.cn" target="_blank">FVL Lab</a>, where I was supervised by <a href="https://scholar.google.com.hk/citations?hl=en&user=f3_FP8AAAAAJ" target="_blank">Prof. Yu-Gang Jiang</a> and <a href="https://scholar.google.com.hk/citations?user=DfWdqzQAAAAJ&hl=en" target="_blank">Prof. Jingjing Chen</a>.
+                         </p>
+                         <p class="mb-12">
+                            My recent research focuses on Multimodal Learning, Video Understanding, and Embodied AI. More specifically, I am interested in egocentric and streaming video understanding with MLLMs, with an emphasis on video question answering, spatio-temporal grounding, and embodied agents for real-world interaction, such as vision-language navigation. I am also interested in AI for Science, including emerging topics such as brain signal (e.g., EEG and MEG) decoding.
+                         </p>
+                         <p class="mb-4 font-bold text-red-500">
+                            Opening Positions
                          </p>
                          <p>
-                            My research interest is focused on Vision-Language Learning, especially Visual Question Answering. In addition, i also delve into some autonoumous driving related topics, such as 3D object detection, lane detection, stereo depth estimation.
+                            团队长期招收博士生、硕士生和本科实习生，欢迎对多模态视频理解、具身智能等方向有热情的同学加入（申请邮件请附上个人简历）。希望你具备一定的 <span class="text-red-500">AI 与编程基础</span>，或者在<span class="text-red-500">数学理论、工程实现、系统搭建</span>等方面有自己的长处。科研没有标准模板，我们期待的不是“成绩好”，而是<span class="text-red-500">好奇心、主动性和执行力</span>。
                          </p>
                      </div>
                 </section>
-
+    
                 <!-- News Section -->
             <section id="news" class="scroll-mt-20">
                 <h2 class="text-2xl font-bold mb-6 section-title">News</h2>
+                <div class="news-window">
                 <ul class="space-y-4">
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-900 text-slate-200 text-xs font-bold rounded border border-slate-700 group-hover:bg-blue-900 group-hover:text-blue-100 group-hover:border-blue-800 transition-colors font-sans shadow-sm">
+                                Apr. 2026
+                            </span>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-100">StreamingEval</span> was accepted to <span class="font-bold text-slate-100">ACL 2026 Findings</span>.
+                        </p>
+                    </li>
+    
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-900 text-slate-200 text-xs font-bold rounded border border-slate-700 group-hover:bg-blue-900 group-hover:text-blue-100 group-hover:border-blue-800 transition-colors font-sans shadow-sm">
+                                Feb. 2026
+                            </span>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Seven papers were accepted to <span class="font-bold text-slate-100">CVPR 2026</span> (6 Main, 1 Findings), covering egoventric & streaming video understanding, vision-language navigation, and related topics.
+                        </p>
+                    </li>
+    
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-900 text-slate-200 text-xs font-bold rounded border border-slate-700 group-hover:bg-blue-900 group-hover:text-blue-100 group-hover:border-blue-800 transition-colors font-sans shadow-sm">
+                                Jan. 2026
+                            </span>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-100">EgoNight</span> was accepted to <span class="font-bold text-slate-100">ICLR 2026</span>.
+                        </p>
+                    </li>
+    
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-900 text-slate-200 text-xs font-bold rounded border border-slate-700 group-hover:bg-blue-900 group-hover:text-blue-100 group-hover:border-blue-800 transition-colors font-sans shadow-sm">
+                                Jan. 2026
+                            </span>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            <span class="font-semibold text-slate-100">SeGDP</span> was accepted to <span class="font-bold text-slate-100">ACM ToMM</span>.
+                        </p>
+                    </li>
+    
+                    <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
+                        <div class="flex-shrink-0 sm:w-24 pt-0.5">
+                            <span class="inline-block px-2.5 py-0.5 bg-slate-900 text-slate-200 text-xs font-bold rounded border border-slate-700 group-hover:bg-blue-900 group-hover:text-blue-100 group-hover:border-blue-800 transition-colors font-sans shadow-sm">
+                                Nov. 2025
+                            </span>
+                        </div>
+                        <p class="text-slate-200 text-sm leading-relaxed">
+                            Our work on EEG to text decoding was accepted to <span class="font-bold text-slate-100">Expert Systems with Applications</span>.
+                        </p>
+                    </li>
+    
                     <!-- Item New 1 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -325,7 +433,7 @@
                             <span class="font-semibold text-slate-100">Look Before You Decide</span> (MARS-Bench) was accepted to <span class="font-bold text-slate-100">ACM MM 2025</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item New 2 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -337,7 +445,7 @@
                             <span class="font-semibold text-slate-100">EgoCross</span> was accepted to <span class="font-bold text-slate-100">AAAI 2026</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item New 3 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -349,7 +457,7 @@
                             <span class="font-semibold text-slate-100">Domain-RAG</span> was accepted to <span class="font-bold text-slate-100">NeurIPS 2025</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item New 4 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -361,7 +469,7 @@
                             <span class="font-semibold text-slate-100">NeighborRetr</span> was accepted to <span class="font-bold text-slate-100">CVPR 2025</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item New 5 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -373,7 +481,7 @@
                             <span class="font-semibold text-slate-100">HSACNet</span> was accepted to <span class="font-bold text-slate-100">ICME 2025</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item 1 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -385,7 +493,7 @@
                             <span class="font-semibold text-slate-100">NuScenes-QA</span> was accepted to <span class="font-bold text-slate-100">AAAI 2024</span>; preprint and code are now online.
                         </p>
                     </li>
-
+    
                     <!-- Item 2 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -394,10 +502,10 @@
                             </span>
                         </div>
                         <p class="text-slate-200 text-sm leading-relaxed">
-                            Our "Locate before Answering" work appeared in <span class="font-bold text-slate-100">IEEE Transactions on Multimedia</span>.
+                            Our work on long-term video unserstanding (<span class="font-semibold text-slate-100">Locate before Answering</span>) was accepted by <span class="font-bold text-slate-100">IEEE Transactions on Multimedia</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item 3 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -406,10 +514,10 @@
                             </span>
                         </div>
                         <p class="text-slate-200 text-sm leading-relaxed">
-                            ViGA for video moment retrieval was presented at <span class="font-bold text-slate-100">ACM SIGIR 2022</span>.
+                            <span class="font-bold text-slate-100">ViGA</span> for video moment retrieval was presented at <span class="font-bold text-slate-100">ACM SIGIR 2022</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item 4 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -421,7 +529,7 @@
                             Wrapped up my multimodal research internship at <span class="font-semibold text-slate-100">Bilibili AI-Lab</span>.
                         </p>
                     </li>
-
+    
                     <!-- Item 5 -->
                     <li class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-5 group">
                         <div class="flex-shrink-0 sm:w-24 pt-0.5">
@@ -430,19 +538,234 @@
                             </span>
                         </div>
                         <p class="text-slate-200 text-sm leading-relaxed">
-                            Scene Graph Refinement Network for VQA was published in <span class="font-bold text-slate-100">IEEE Transactions on Multimedia</span>.
+                            <span class="font-bold text-slate-100">Scene Graph Refinement Network</span> for VQA was published in <span class="font-bold text-slate-100">IEEE Transactions on Multimedia</span>.
                         </p>
                     </li>
                 </ul>
+                </div>
             </section>
 
 
                 <!-- Selected Publications -->
                 <section id="publications" class="scroll-mt-20">
-                    <h2 class="text-2xl font-bold mb-6 section-title">Publications</h2>
-
-                    <div class="space-y-5">
-
+                    <h2 class="text-2xl font-bold mb-3 section-title">Publications</h2>
+                    <p class="text-slate-400 text-sm italic mb-6">* joint first author, # corresponding author</p>
+    
+                    <div class="pub-year-tabs" role="tablist" aria-label="Publication years">
+                        <button type="button" class="pub-year-tab active" data-pub-year="2026" role="tab" aria-selected="true" aria-controls="pub-panel-2026">2026</button>
+                        <button type="button" class="pub-year-tab" data-pub-year="2025" role="tab" aria-selected="false" aria-controls="pub-panel-2025">2025</button>
+                        <button type="button" class="pub-year-tab" data-pub-year="earlier" role="tab" aria-selected="false" aria-controls="pub-panel-earlier">2024 &amp; Earlier</button>
+                    </div>
+    
+                    <div id="pub-panel-2026" class="pub-year-panel space-y-5" role="tabpanel">
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">ACL 2026</span>
+                                     <img src="./Files/imgs/StreamingEval.jpg" alt="StreamingEval" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/pdf/2603.21493" target="_blank" class="hover:text-blue-400 transition-colors">StreamingEval: A Unified Evaluation Protocol towards Realistic Streaming Video Understanding</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Tang,+G" target="_blank" class="hover:text-blue-400 transition-colors">Guowei Tang</a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Qian,+T" target="_blank" class="hover:text-blue-400 transition-colors"><strong>Tianwen Qian#</strong></a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Zheng,+H" target="_blank" class="hover:text-blue-400 transition-colors">Huanran Zheng</a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Wang,+Y" target="_blank" class="hover:text-blue-400 transition-colors">Yifei Wang</a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Wang,+X" target="_blank" class="hover:text-blue-400 transition-colors">Xiaoling Wang</a>
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">ACL Findings, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2603.21493" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/wwgTang-111/StreamingEval1" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/CLiViS.jpg" alt="CLiViS" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/pdf/2506.17629" target="_blank" class="hover:text-blue-400 transition-colors">CLiViS: Unleashing Cognitive Map through Linguistic-Visual Synergy for Embodied Visual Reasoning</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Kailing Li, Qi'ao Xu, <strong>Tianwen Qian#</strong>, Yuqian Fu, Yang Jiao, Xiaoling Wang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2506.17629" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/Teacher-Tom/CLiViS" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/HSGM.jpg" alt="HSGM" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">Bridging the 2D-3D Gap: A Hierarchical Semantic-Geometric Map for Vision Language Navigation</h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Kailing Li, <strong>Tianwen Qian#</strong>, Lijin Yang, Yuqian Fu, Jingyu Gong, Xiaoling Wang, Liang He
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR, 2026 (to appear online)</p>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/Omni.jpg" alt="Omni-Supervised Motion Editing" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">Omni-Supervised Motion Editing: Balancing Change and Invariance through Positive-Negative Learning</h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Zhenwu Shi, Jingyu Gong, Peiwei Wang, Xingzan Wang, <strong>Tianwen Qian</strong>, Wenxi Li, Yuan Fang, Jiao Xie, Lizhuang Ma, Shaohui Lin
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR, 2026 (to appear online)</p>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/Think.jpg" alt="Think, Then Verify" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/pdf/2603.04977" target="_blank" class="hover:text-blue-400 transition-colors">Think, Then Verify: A Hypothesis-Verification Multi-Agent Framework for Long Video Understanding</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Zheng Wang, Haoran Chen, Haoxuan Qin, Zhipeng Wei, <strong>Tianwen Qian</strong>, Cong Bai
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2603.04977" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/Haorane/VideoHV-Agent" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/EgoSound.jpg" alt="EgoSound" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/pdf/2602.14122" target="_blank" class="hover:text-blue-400 transition-colors">EgoSound: Benchmarking Sound Understanding in Egocentric Videos</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Bingwen Zhu, Yuqian Fu, Qiaole Dong, Guolei Sun, <strong>Tianwen Qian</strong>, Yuzheng Wu, Danda Pani Paudel, Xiangyang Xue, Yanwei Fu
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2602.14122" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://groolegend.github.io/EgoSound/" target="_blank" class="pub-link"><i class="fas fa-code mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/V2-SAM.jpg" alt="V2-SAM" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/pdf/2511.20886" target="_blank" class="hover:text-blue-400 transition-colors">V2-SAM: Marrying SAM2 with Multi-Prompt Experts for Cross-View Object Correspondence</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Jiancheng Pan, Runze Wang, <strong>Tianwen Qian</strong>, Mohammad Mahdi, Yanwei Fu, Xiangyang Xue, Xiaomeng Huang, Luc Van Gool, Danda Pani Paudel, Yuqian Fu
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2511.20886" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://jianchengpan.space/projects/V2-SAM/" target="_blank" class="pub-link"><i class="fas fa-code mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">CVPR 2026</span>
+                                     <img src="./Files/imgs/StreamEQA.jpg" alt="StreamEQA" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/pdf/2512.04451" target="_blank" class="hover:text-blue-400 transition-colors">StreamEQA: Towards Streaming Video Understanding for Embodied Scenarios</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Yifei Wang, Zhenkai Li, <strong>Tianwen Qian#</strong>, Huanran Zheng, Zheng Wang, Yuqian Fu, Xiaoling Wang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">CVPR Findings, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/pdf/2512.04451" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                    <a href="https://github.com/MrYF-Wang/StreamEQA" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">ICLR 2026</span>
+                                     <img src="./Files/imgs/EgoNight.jpg" alt="EgoNight" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://arxiv.org/abs/2510.06218" target="_blank" class="hover:text-blue-400 transition-colors">EgoNight: Towards Egocentric Vision Understanding at Night with a Challenging Benchmark</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Deheng Zhang, Yuqian Fu, Runyi Yang, Yang Miao, <strong>Tianwen Qian</strong>, Xu Zheng, Guolei Sun, Ajad Chhatkuli, Xuanjing Huang, Yu-Gang Jiang, Luc Van Gool, Danda Pani Paudel
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">ICLR, 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://arxiv.org/abs/2510.06218" target="_blank" class="pub-link"><i class="fas fa-file-alt mr-1"></i> Paper</a>
+                                    <a href="https://github.com/dehezhang2/EgoNight" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">ACM ToMM</span>
+                                     <img src="./Files/imgs/SeGDP.jpg" alt="SeGDP" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://dl.acm.org/doi/full/10.1145/3796719" target="_blank" class="hover:text-blue-400 transition-colors">SeGDP: Source-free Cross-domain Few-shot Learning via Semantic Guided Diversity Prompting</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Linhai Zhuo, Zheng Wang, <strong>Tianwen Qian</strong>, Yuqian Fu
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">ACM Transactions on Multimedia Computing, Communications, and Applications (ToMM), 2026</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://dl.acm.org/doi/full/10.1145/3796719" target="_blank" class="pub-link"><i class="fas fa-file-alt mr-1"></i> Paper</a>
+                                    <a href="https://github.com/qwzlh/TOMM_submission" target="_blank" class="pub-link"><i class="fab fa-github mr-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+    
                         <!-- Paper New 1 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -456,7 +779,7 @@
                                     <a href="https://arxiv.org/abs/2508.10729" target="_blank" class="hover:text-blue-400 transition-colors">Egocross: Benchmarking multimodal large language models for cross-domain egocentric video question answering</a>
                                 </h3>
                                 <p class="text-slate-300 text-sm mb-2">
-                                    Yanjun Li, Yuqian Fu, <strong>Tianwen Qian</strong>, Qi'ao Xu, Silong Dai, Danda Pani Paudel, Luc Van Gool, Xiaoling Wang
+                                    Yanjun Li, Yuqian Fu, <strong>Tianwen Qian#</strong>, Qi'ao Xu, Silong Dai, Danda Pani Paudel, Luc Van Gool, Xiaoling Wang
                                 </p>
                                 <p class="text-slate-500 text-xs italic mb-3">
                                     AAAI, 2026
@@ -467,7 +790,30 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+    
+                    <div id="pub-panel-2025" class="pub-year-panel space-y-5" role="tabpanel" hidden>
+                        <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
+                            <div class="sm:w-40 flex-shrink-0 hidden sm:block">
+                                <div class="w-full aspect-[4/3] bg-slate-900 border border-slate-700 flex items-center justify-center text-xs text-slate-400 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300 overflow-hidden relative">
+                                     <span class="paper-venue-tag">ESWA 2025</span>
+                                     <img src="./Files/imgs/EEG-ESWA.jpg" alt="EEG Signals and Language" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
+                                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417425039156" target="_blank" class="hover:text-blue-400 transition-colors">Guiding LLMs to Decode Text via Aligning Semantics in EEG Signals and Language</a>
+                                </h3>
+                                <p class="text-slate-300 text-sm mb-2">
+                                    Huanran Zheng, Yuanbin Wu, <strong>Tianwen Qian</strong>, Wenjing Yue, Xiaoling Wang
+                                </p>
+                                <p class="text-slate-500 text-xs italic mb-3">Expert Systems with Applications (ESWA), 2025</p>
+                                <div class="flex flex-wrap gap-2 mt-3">
+                                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417425039156" target="_blank" class="pub-link"><i class="fas fa-file-pdf mr-1"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+    
                         <!-- Paper New 2 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -491,7 +837,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                         <!-- Paper New 3 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -516,7 +862,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                         <!-- Paper New 4 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -541,7 +887,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                         <!-- Paper New 5 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -555,7 +901,7 @@
                                     <a href="https://arxiv.org/abs/2504.13428" target="_blank" class="hover:text-blue-400 transition-colors">HSACNet: Hierarchical Scale-Aware Consistency Regularized Semi-Supervised Change Detection</a>
                                 </h3>
                                 <p class="text-slate-300 text-sm mb-2">
-                                    Qi'ao Xu, Pengfei Wang, Yanjun Li, <strong>Tianwen Qian</strong>, Xiaoling Wang
+                                    Qi'ao Xu, Pengfei Wang, Yanjun Li, <strong>Tianwen Qian#</strong>, Xiaoling Wang
                                 </p>
                                 <p class="text-slate-500 text-xs italic mb-3">
                                     ICME, 2025
@@ -565,8 +911,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
 
+                    <div id="pub-panel-earlier" class="pub-year-panel space-y-5" role="tabpanel" hidden>
                         <!-- Paper 1 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -578,7 +926,7 @@
                             <div class="flex-1">
                                 <h3 class="text-lg font-bold text-slate-100 leading-snug mb-2">
                                     <a href="https://arxiv.org/abs/2305.14836" target="_blank" class="hover:text-blue-400 transition-colors">NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario</a>
-                                    <span class="text-red-600 font-bold ml-2 text-sm align-middle" title="Citation and GitHub star counts">(264 cites • 217 GitHub stars)</span>
+                                    <span class="text-red-600 font-bold ml-2 text-sm align-middle" title="Citation and GitHub star counts">(349 citations • 231 GitHub stars)</span>
                                 </h3>
                                 <p class="text-slate-300 text-sm mb-2">
                                     <strong>Tianwen Qian</strong>, Jingjing Chen, Linhai Zhuo, Yang Jiao, Yu-Gang Jiang
@@ -592,7 +940,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                         <!-- Paper 2 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -616,7 +964,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                         <!-- Paper 3 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -641,7 +989,7 @@
                                 </div>
                             </div>
                         </div>
-
+    
                          <!-- Paper 4 -->
                         <div class="pub-entry flex flex-col sm:flex-row gap-5 group">
                             <div class="sm:w-40 flex-shrink-0 hidden sm:block">
@@ -665,15 +1013,15 @@
                                 </div>
                             </div>
                         </div>
-
+    
                     </div>
                 </section>
-
+    
                 <!-- Experiences Section -->
                  <section id="experiences" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold mb-4 section-title">Experiences</h2>
                     <div class="space-y-6">
-
+    
                         <!-- New: East China Normal University -->
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-dashed border-slate-700 pb-4">
                             <div>
@@ -684,7 +1032,7 @@
                                 <span class="date-badge">Mar. 2025 – Present</span>
                             </div>
                         </div>
-
+    
                         <!-- New: Bosch -->
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-dashed border-slate-700 pb-4">
                             <div>
@@ -695,7 +1043,7 @@
                                 <span class="date-badge">Jul. 2024 – Nov. 2024</span>
                             </div>
                         </div>
-
+    
                         <!-- Existing: Bilibili AI-Lab -->
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-dashed border-slate-700 pb-4">
                             <div>
@@ -706,7 +1054,7 @@
                                 <span class="date-badge">Jun. 2021 – Jun. 2022</span>
                             </div>
                         </div>
-
+    
                         <!-- Existing: Dalian University of Technology -->
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-dashed border-slate-700 pb-4">
                             <div>
@@ -717,10 +1065,10 @@
                                 <span class="date-badge">Sep. 2018 – Jun. 2019</span>
                             </div>
                         </div>
-
+    
                     </div>
                 </section>
-
+    
                 <!-- Education Section -->
                  <section id="education" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold mb-4 section-title">Education</h2>
@@ -745,14 +1093,37 @@
                         </div>
                     </div>
                 </section>
-
+    
+                <!-- Awards Section -->
+                <section id="awards" class="scroll-mt-20">
+                    <h2 class="text-2xl font-bold mb-4 section-title">Awards</h2>
+                    <div class="space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-dashed border-slate-700 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-100 text-base">上海市计算机学会优秀博士学位论文</h3>
+                            </div>
+                            <div class="mt-2 sm:mt-0 sm:ml-4 text-right">
+                                <span class="date-badge">Mar. 2025</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline border-b border-dashed border-slate-700 pb-4">
+                            <div>
+                                <h3 class="font-bold text-slate-100 text-base">上海市优秀毕业生</h3>
+                            </div>
+                            <div class="mt-2 sm:mt-0 sm:ml-4 text-right">
+                                <span class="date-badge">Jun. 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
                 <!-- Academic Services Section -->
                 <section id="services" class="scroll-mt-20">
                     <h2 class="text-2xl font-bold mb-4 section-title">Academic Services</h2>
                     <ul class="space-y-3 text-slate-200 text-sm">
                         <li class="flex items-start">
                             <i class="fas fa-user-check text-blue-400 mt-1 mr-3"></i>
-                            <span>Conference Reviewer for <strong>ACM MM 2023</strong> / <strong>ECCV 2022</strong> / <strong>CVPR 2022</strong>.</span>
+                            <span>Conference Reviewer for <strong>ICML</strong> / <strong>NeurIPS</strong> / <strong>CVPR </strong> / <strong>ECCV</strong> / <strong>AAAI</strong> / <strong>ACM MM</strong>.</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-book-open text-blue-400 mt-1 mr-3"></i>
@@ -760,19 +1131,31 @@
                         </li>
                     </ul>
                 </section>
-                <section>
-                    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=AW0oDLTPrqCGyPuV2yp-JdjG1VyRzT_9rBHsvn9ExF0&cl=ffffff&w=200"></script>
-                </section>
-
-
                  <!-- Footer -->
                 <footer class="text-center text-slate-400 text-sm mt-8 pb-8 border-t border-slate-700 pt-8">
-                    <p>&copy; 2025 Tianwen Qian.</p>
+                    <p>&copy; 2026 Tianwen Qian.</p>
                     <p class="mt-2 text-xs">Powered by <a href="#" class="hover:text-blue-600 hover:underline text-slate-500 transition-colors">AcademicPages</a> & <a href="#" class="hover:text-blue-600 hover:underline text-slate-500 transition-colors">Tailwind CSS</a>.</p>
                 </footer>
-
+    
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll(".pub-year-tab").forEach((tab) => {
+            tab.addEventListener("click", () => {
+                const selectedYear = tab.dataset.pubYear;
+    
+                document.querySelectorAll(".pub-year-tab").forEach((button) => {
+                    const isActive = button === tab;
+                    button.classList.toggle("active", isActive);
+                    button.setAttribute("aria-selected", String(isActive));
+                });
+    
+                document.querySelectorAll(".pub-year-panel").forEach((panel) => {
+                    panel.hidden = panel.id !== `pub-panel-${selectedYear}`;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
